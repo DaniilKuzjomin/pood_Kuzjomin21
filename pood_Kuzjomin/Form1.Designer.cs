@@ -1,4 +1,6 @@
-﻿namespace pood_Kuzjomin
+﻿using System.Windows.Forms;
+
+namespace pood_Kuzjomin
 {
     partial class Form1
     {
@@ -43,6 +45,7 @@
             this.Uuenda_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.kat_button = new System.Windows.Forms.Button();
+            this.kat_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Toode_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +101,7 @@
             // kategooria_lbl
             // 
             this.kategooria_lbl.AutoSize = true;
-            this.kategooria_lbl.Location = new System.Drawing.Point(12, 178);
+            this.kategooria_lbl.Location = new System.Drawing.Point(12, 173);
             this.kategooria_lbl.Name = "kategooria_lbl";
             this.kategooria_lbl.Size = new System.Drawing.Size(58, 13);
             this.kategooria_lbl.TabIndex = 6;
@@ -107,7 +110,7 @@
             // Kat_Combo
             // 
             this.Kat_Combo.FormattingEnabled = true;
-            this.Kat_Combo.Location = new System.Drawing.Point(74, 175);
+            this.Kat_Combo.Location = new System.Drawing.Point(74, 170);
             this.Kat_Combo.Name = "Kat_Combo";
             this.Kat_Combo.Size = new System.Drawing.Size(121, 21);
             this.Kat_Combo.TabIndex = 7;
@@ -128,6 +131,7 @@
             this.Otsi_btn.TabIndex = 9;
             this.Otsi_btn.Text = "Otsi fail";
             this.Otsi_btn.UseVisualStyleBackColor = true;
+            this.Otsi_btn.Click += new System.EventHandler(this.Otsi_btn_Click);
             // 
             // Kustuta_btn
             // 
@@ -137,6 +141,7 @@
             this.Kustuta_btn.TabIndex = 10;
             this.Kustuta_btn.Text = "Kustuta";
             this.Kustuta_btn.UseVisualStyleBackColor = true;
+            this.Kustuta_btn.Click += new System.EventHandler(this.Kustuta_btn_Click);
             // 
             // Lisa_btn
             // 
@@ -167,19 +172,31 @@
             // 
             // kat_button
             // 
-            this.kat_button.Location = new System.Drawing.Point(95, 202);
+            this.kat_button.Location = new System.Drawing.Point(3, 197);
             this.kat_button.Name = "kat_button";
-            this.kat_button.Size = new System.Drawing.Size(89, 24);
+            this.kat_button.Size = new System.Drawing.Size(100, 29);
             this.kat_button.TabIndex = 14;
             this.kat_button.Text = "Lisa kategooria";
             this.kat_button.UseVisualStyleBackColor = true;
             this.kat_button.Click += new System.EventHandler(this.kat_button_Click);
+            // 
+            // kat_btn
+            // 
+            this.kat_btn.Location = new System.Drawing.Point(109, 197);
+            this.kat_btn.Name = "kat_btn";
+            this.kat_btn.Size = new System.Drawing.Size(113, 29);
+            this.kat_btn.TabIndex = 15;
+            this.kat_btn.Text = "Kustuta Kategooria";
+            this.kat_btn.UseVisualStyleBackColor = true;
+            this.kat_btn.Click += new System.EventHandler(this.kat_btn_Click);
+
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.kat_btn);
             this.Controls.Add(this.kat_button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Uuenda_btn);
@@ -222,6 +239,7 @@
         private System.Windows.Forms.Button Uuenda_btn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button kat_button;
+        private System.Windows.Forms.Button kat_btn;
     }
 }
 
